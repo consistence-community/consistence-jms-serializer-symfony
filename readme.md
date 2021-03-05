@@ -1,6 +1,23 @@
 Symfony Bundle integrating Consistence library with JMS Serializer
 ==================================================================
 
+
+## Note
+
+Instead of using this bundle, you can register the handler manually in the `config/services.yaml` file:
+
+```yaml
+services:
+    Consistence\JmsSerializer\Enum\EnumSerializerHandler:
+        tags:
+            - { name: jms_serializer.subscribing_handler }
+```
+
+
+
+---
+
+
 > This is a Symfony bundle providing integration for the standalone package
 [`consistence/consistence-jms-serializer`](https://github.com/consistence/consistence-jms-serializer),
 if you are not using Symfony, follow instructions there.
